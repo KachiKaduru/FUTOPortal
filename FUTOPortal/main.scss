@@ -1,0 +1,233 @@
+:root{
+    --primary-color: purple;
+}
+
+body{
+    background-color: lightgray;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+header{
+    background-color: var(--primary-color);
+
+    .container{
+        color: white;
+        display: flex;
+        place-content: space-between;
+    }
+
+    .logo{
+        margin: 12px ;
+
+        .logo-img{
+            width: 55px;
+        }
+
+        h3{
+            display: inline;
+            margin: 10px;
+            width: 320px;
+            position: absolute;
+            font-weight: 600; 
+        }
+        
+    }
+
+    .mobile-menu{
+        height: 25px;
+        cursor: pointer;
+        margin: 1.5em 1em 1em 1em;
+        position: relative;
+        top: 5px;
+        color: white;
+        filter: invert(1);
+    }
+
+    nav{
+        display: none;
+    }
+}
+
+.hero{
+    background-color: white;
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto 60px;
+    padding: 30px;
+    border: 2px solid white;
+    text-align: center;
+    border: 1px sold white;
+    border-radius: 2em;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+    img{
+        width: 69px;
+        height: 69px;
+    }
+
+    form{
+        margin-top: -1.3em;
+        p{
+            font-weight: 700;
+        }
+    }
+
+    input{
+        background-color: #f2f2f2;
+        border: 1px solid #f2f2f2;
+        margin: 0px 0px 15px;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+        border-radius: 3px;
+    }
+
+    .submit{
+        background-color: var(--primary-color);
+        color: yellow;
+
+        &:hover{
+            color: yellow;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+    }
+
+    .others{
+        text-align: left;
+        
+        a{
+            color: red;
+            text-decoration: none;
+        }
+
+        a, p{
+            font-size: 12px;
+        }
+    }
+
+    a, i{
+        text-decoration: none;
+        font-size: 14px;
+    }
+}
+
+nav.menu-btn{
+    display: block;
+}
+
+nav{
+    position: fixed;
+    z-index: 99;
+    width: 46%;
+    right: 0;
+    top: 0;
+    background: var(--primary-color);
+    opacity: .98;
+    height: 100vh;
+
+    .mobile-exit{
+        height: 30px;
+    }
+
+    ul{
+        margin-top: 5em;
+        margin-left: -1em;
+        list-style-type: none;
+
+        a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: .8em;
+            text-align: right;
+
+            &:hover{
+                color: yellow;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .mobile-exit{
+        display: block;
+        float: right;
+        margin: 1.8em 1em 0 0;
+        cursor: pointer;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    header{
+
+        .container{
+            display: grid;
+            grid-template-columns: 180px auto;
+            justify-content: space-between;
+            
+        }
+
+        .logo{
+
+            h3{
+                display: inline;
+                width: 300px;
+            }
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background: none;
+            position: unset;
+            height: auto;
+            padding: 0;
+            width: 100%;
+
+        }
+
+        .mobile-exit, .mobile-menu{
+            display: none;
+        }
+
+        ul{
+            display: flex;
+            margin-left: -12em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    header{
+        
+        .logo{
+
+            h3{
+                width: 300px;
+                display: inline;
+            }
+        }
+
+        ul{
+            margin: auto;
+
+            li{
+                a{
+                    font-size: 16px;
+                    padding: 16px;
+
+                    &:hover{
+                        color: yellow;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

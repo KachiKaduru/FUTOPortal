@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTO Portal</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img class="logo-img" src="FUTO_logo_main.webp" alt="">
+    
+                <h3>Federal University of Technology, Owerri</h3>
+            </div>
+    
+            <img class="mobile-menu" id="menuMobile" src="menu.svg" alt="Navigation" >
+
+            <nav>
+                <img class="mobile-exit" id="exitMobile" src="exit.svg" alt="Close Navigation" >
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Certificate Verification</a></li>
+                    <li><a href="#">Bursary</a></li>
+                    <li><a href="#">Prospective Students</a></li>
+                    <li><a href="#">PostGraduate</a></li>
+                    <li><a href="#">Help/ Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+
+        <img src="noun-graduation-hat-1842485.svg" alt="hero-hat">
+
+        <div class="container">
+            <form action="">
+                <p>Portal Login</p>
+
+                <input type="text" name="username" placeholder="Username"> <br>
+
+                <input type="password" name="password" placeholder="Password"> <br>
+
+                <input type="submit" name="submit" value="Login" class="submit"> <br>
+            </form>
+        </div>
+
+        <div class="others">
+            <a href="#"> Forgot Password</a>
+            <p>First time here? <a href="#">Verify your account</a></p>
+        </div>
+
+        <a href="#">To vote for Best Tertiary Institution website/portal click here</a>
+
+        <p><i>Powered By Tenece Professional Services</i></p>
+    </section>
+
+    <script>
+
+        const mobileBtn = document.getElementById('menuMobile')
+        const nav = document.querySelector('nav')
+        const mobileBtnExit = document.getElementById('exitMobile');
+        
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+    </script>
+    
+</body>
+</html>
