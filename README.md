@@ -1,2 +1,1 @@
-# FUTOPortal
-A remake of FUTO portal/website
+FUTOPortal/index.html
